@@ -23,6 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const rightscene = document.getElementById('rightscene');
     const wrongscene = document.getElementById('wrongscene');
 
+    scene1.style.display ='flex';
+    scene2.style.display = 'none';
+
     startBtn.addEventListener('click', () => {
         document.getElementById('scene2').style.display = 'flex';
         document.getElementById('scene1').style.display = 'none';
