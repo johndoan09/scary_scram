@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Butcherman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap');
+
+.scene {
+    display: none; /* Initially hide all scenes */
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Julee", cursive;
+    box-shadow: inset 0px 10px 100px 5px black,
+                inset 0px -10px 100px 5px black;
+}
+/* START GAME SCENE */
+#scene1 {
+    background-color: #faf8e1;
+    display: flex; /* Show the first scene initially */
+    flex-direction: column;
+}
+.title{
+    padding-right: 30%;
+}
+.title h3 {
+    color: #001d6c;
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+}
+.title h1 {
+    color: #001d6c;
+    font-size: 7rem;
+    line-height: 1.25em;
+    margin: 0;
+    font-family: "Nanum Brush Script", cursive;
+    text-shadow: 2px 2px 8px #000a26;
+}
+.title1 {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.scene1btns {
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.scene1btns button {
+    background-color: #001d6c;
+    color: white;
+    font-size: 1.5rem;
+    width: 35%;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    font-family: "Julee", cursive;
+}
+.drip_container {
+    width: fit-content;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.drip_container img {
+    width: 100vw;
+    top: 0;
+    left: 0;
+}
+
+/* SCENE 2 */
+#scene2 {
+    background-color: #faf8e1;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.walls_container {
+    width: fit-content;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.walls_container img {
+    width: 100dvw;
+    height: 100dvh;
+}
+#scene2 h3 {
+    font-family: 'Creepster';
+    color: #001d6c;
+    margin: 0;
+    padding-left: 3.5dvw;
+    padding-bottom: 10px;
+}
+.scene2content {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+.scene2content #final {
+    color: red;
+    padding-left: 0.5dvw;
+    display: none;
+}
+.doors {
+    height: fit-content;
+    width: 70dvw;
+    display: flex;
+    gap: 5%;
+    padding-left: 3.5dvw;
+    justify-content: space-evenly;
+    /* padding-bottom: 308px; */
+    padding-bottom: 33dvh;
+    z-index: 1000;
+}
+.doors img {
+    height: 17dvw;
+    width: 10dvw;
+}
+
+.doors img:hover {
+    cursor: pointer;
+    background-color: black;
+    box-shadow: 0px 0px 50px 1px black,
+                0px 0px 50px 1px black
+}
+.tracker {
+    position:absolute;
+    top:0;
+    left: 0;
+    z-index: 100;
+    margin: 0;
+    padding-left: 15px;
+    padding-top: 15px;
+    height: fit-content;
+}
+.tracker h1 {
+    color: white;
+    margin: 0;
+}
+
+/* RULES SCENE */
+#rulescene {
+    background-color: #faf8e1;
+}
+#rulescene p {
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 2.5rem;
+    color: black;
+    margin-bottom: 0;
+    font-family: 'Protest Revolution';
+    text-shadow: 2px 2px 10px white;
+}
+
+#rulescene h1 {
+    font-size: 5rem;
+    padding-top: 10%;
+    margin: 0;
+    text-shadow: 5px 5px 20px white;
+    font-family: 'Creepster';
+}
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #001d6c;
+}
+.content button {
+    background-color: #001d6c;
+    color: white;
+    font-size: 1.5rem;
+    width: 15%;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    font-family: "Julee", cursive;
+}
+#rulescenebtn:hover, #startbtn:hover, #rulesbtn:hover, #losebtn:hover, #winbtn:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 10px #001d6c;
+}
+
+/* DARK SCENE */
+
+#darkscene {
+    background-color: #faf8e1;
+}
+
+.darkcontent {
+    font-family: 'Creepster';
+    color: white;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.darkness {
+    height: 100dvh;
+    width: 100dvw;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 90%;
+}
+
+/* SAFE SCENE */
+
+#safescene {
+    background-color: #faf8e1;
+}
+
+.safecontent {
+    color:#001d6c;
+}
+
+/* SCARY SCENE */
+
+#scaryscene {
+    background-color: #faf8e1;
+}
+
+.scarycontent {
+    font-family: 'Creepster';
+    color: white;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.darkness2 {
+    height: 100dvh;
+    width: 100dvw;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 90%;
+}
+
+/* TOM SCENE */
+
+#tomscene {
+    background-color: #faf8e1;
+}
+
+#tomcontent {
+    display: flex;
+    justify-content: space-evenly;
+    height: fit-content;
+    width: fit-content;
+}
+
+.tomtext {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tomcontent2 {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+.tomcontent2 #final2 {
+    color: red;
+    padding-left: 0.5dvw;
+    display: none;
+}
+
+.tomtext h1 {
+    color: #001d6c;
+    font-family: 'Creepster';
+    margin-top:5px;
+    margin-bottom: 5px;
+}
+
+.topdoors {
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    height: 70dvh;
+    padding-top: 20dvh;
+    /* padding-bottom: 5dvh; */
+}
+
+.topdoors img {
+    rotate: 90deg;
+    height: 7dvh;
+}
+
+.topdoors img:hover {
+    cursor: pointer;
+    filter: drop-shadow(0 0 20px black)
+}
+.tracker2 {
+    position:absolute;
+    top:0;
+    left: 0;
+    z-index: 100;
+    margin: 0;
+    padding-left: 15px;
+    padding-top: 15px;
+    height: fit-content;
+}
+.tracker2 h1 {
+    color: white;
+    margin: 0;
+}
+
+/* RIGHT SCENE */
+#rightscene {
+    background-color: #faf8e1;
+}
+
+/* WRONG SCENE */
+#wrongscene {
+    background-color: #faf8e1;
+}
+
+/* LOSE SCENE */
+
+#losescene {
+    background-color: #faf8e1;
+}
+
+#losecontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#losecontent h1 {
+    font-size: 100px;
+    color: #001d6c;
+}
+
+#losecontent button {
+    background-color: #001d6c;
+    color: white;
+    font-size: 1.5rem;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Julee", cursive;
+}
+
+/* WIN SCENE */
+
+#winscene {
+    background-color: #faf8e1;
+}
+
+#wincontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#wincontent h1 {
+    font-size: 100px;
+    color: #001d6c;
+}
+
+#wincontent button {
+    background-color: #001d6c;
+    color: white;
+    font-size: 1.5rem;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Julee", cursive;
+}

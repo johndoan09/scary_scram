@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spooky Scary Scram</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+<body>
+    <div id="scene1" class="scene">
+        <div class="drip_container">
+            <img src="assets/dripping.png" alt="dripping background" class="pictures">
+        </div>
+        <div class="title">
+            <h3>Mouse and Cat's</h3>
+            <div class="title1">
+                <h1>Spooky Scary Scram</h1>
+            </div>
+            <div class="scene1btns">
+                <button class="buttons" id="startbtn">Start</button>
+                <button class="buttons" id="rulesbtn">Rules</button>
+            </div>
+        </div>
+    </div>
+    <div id="scene2" class="scene">
+        <div class="walls_container">
+            <img src="assets/walls.png" alt="wall background" class="pictures">
+        </div>
+        <div class="drip_container">
+            <img src="assets/dripping.png" alt="dripping background" class="pictures">
+        </div>
+        <div class="tracker">
+            <h1 id="stageTracker">Stage: 3/5</h1>
+        </div>
+        <div class="scene2content">
+            <h3 id="random">Pick a Door!</h3>
+            <h3 id="final">(FINAL DOOR)</h3>
+        </div>
+        <h3>BEWARE OF THE CAT!!!</h3>
+        <div class="doors">
+            <img src="assets/door.png" alt="door one" class="pictures" id="doorone">
+            <img src="assets/door.png" alt="door two" class="pictures" id="doortwo">
+            <img src="assets/door.png" alt="door three" class="pictures" id="doorthree">
+        </div>
+    </div>
+    <div id="rulescene" class="scene">
+        <div class="drip_container">
+            <img src="assets/dripping.png" alt="dripping background" class="pictures">
+        </div>
+        <div class="content">
+            <h1>How To Play:</h1>
+            <p>Play as Jerry to reach your cheese before Tom reaches his milk. Unlock the correct doors with a special key to find your special treat. Be careful! Tom might be hiding behind the door! If he catches you, he will steal the key to unlock the doors to his milk. Take back the key by hiding behind the door you think he will pick.</p>
+            <button class="buttons" id="rulescenebtn">Back</button>
+        </div>
+    </div>
+    <div id="darkscene" class="scene">
+        <div class="drip_container">
+            <img src="assets/dripping.png" alt="dripping background" class="pictures">
+        </div>
+        <div class="darkness"></div>
+        <div class="darkcontent">
+            <h1>JERRY ENTERS DARK ROOM CHECKING FOR TOM...</h1>
+        </div>
+    </div>
+    <div id="safescene" class="scene">
+        <div class="walls_container">
+            <img src="assets/walls.png" alt="wall background" class="pictures">
+        </div>
+        <div class="drip_container">
+            <img src="assets/dripping.png" alt="dripping background" class="pictures">
+        </div>
+        <div class="safecontent">
+            <h1>YOU MADE IT THROUGH SAFELY!!</h1>
+            <h1>KEEP GOING! THE SMELL OF CHEESE IS SO CLOSE BY...</h1>
+        </div>
+    </div>
+    <div id="scaryscene" class="scene">
+        <div class="drip_container">
+            <img src="assets/dripping.png" alt="dripping background" class="pictures">
+        </div>
+        <div class="darkness2"></div>
+        <div class="scarycontent">
+            <h1>AHHHHHHH!!!</h1>
+            <h1>OH NOO! TOM TOOK THE KEYS!</h1>
+        </div>
+    </div>
+    <div id="tomscene" class="scene">
+        <div class="drip_container">
+            <img src="assets/dripping.png" alt="dripping background" class="pictures">
+        </div>
+        <div class="tracker2">
+            <h1 id="stageTracker2">Stage: 3/5</h1>
+        </div>
+        <div id="tomcontent">
+            <div class="tomtext">
+                <div class="tomcontent2">
+                    <h1 id="random2">Quick!!</h1>
+                    <h1 id="final2">(FINAL DOOR)</h1>
+                </div>
+                <h1>Hide behind the right door</h1>
+                <h1>to scare Tom and get your keys back!</h1>
+            </div>
+            <div class="topdoors">
+                <img src="assets/rectangle.png" alt="top door one" class="pictures" id="topone">
+                <img src="assets/rectangle.png" alt="top door two" class="pictures" id="toptwo"> 
+                <img src="assets/rectangle.png" alt="top door three" class="pictures" id="topthree">
+            </div>
+        </div>
+    </div>
+    <div id="rightscene" class="scene">
+        <div class="drip_container">
+            <img src="assets/dripping.png" alt="dripping background" class="pictures">
+        </div>
+        <div id="rightcontent">
+            <h1>YAYYYY!</h1>
+            <h1>You picked the right door!</h1>
+            <h1>Now go and get that cheese!</h1>
+        </div>
+    </div>
+    <div id="wrongscene" class="scene">
+        <div class="drip_container">
+            <img src="assets/dripping.png" alt="dripping background" class="pictures">
+        </div>
+        <div id="wrongcontent">
+            <h1>Awwww...</h1>
+            <h1>You picked the wrong room!</h1>
+        </div>
+    </div>
+    <div id="losescene" class="scene">
+        <div class="drip_container">
+            <img src="assets/dripping.png" alt="dripping background" class="pictures">
+        </div>
+        <div id="losecontent">
+            <h1>YOU LOSE!!!</h1>
+            <button class="buttons" id="losebtn">Play Again</button>
+        </div>
+    </div>
+    <div id="winscene" class="scene">
+        <div class="drip_container">
+            <img src="assets/dripping.png" alt="dripping background" class="pictures">
+        </div>
+        <div id="wincontent">
+            <h1>YOU WIN!!!</h1>
+            <button class="buttons" id="winbtn">Play Again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
