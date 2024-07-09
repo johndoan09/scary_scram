@@ -76,7 +76,36 @@
     top: 0;
     left: 0;
 }
-
+.soundcontainer {
+    position:absolute;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    padding-top: 1dvw;
+    padding-right: 1dvw;
+    width: fit-content;
+    height: auto;
+}
+.soundcontainer button {
+    background-color: #001d6c;
+    color: white;
+    box-shadow: 1px 1px 10px white;
+    font-size: 1.25dvw;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1dvw;
+    padding-right: 1dvw;
+    font-family: "Julee", cursive;
+    transition: 0.5s;
+}
+.soundcontainer button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #001d6c;
+    box-shadow: 1px 1px 20px white;
+}
 /* SCENE 2 */
 #scene2 {
     background-color: #faf8e1;
@@ -100,6 +129,7 @@
     margin: 0;
     padding-left: 3.5dvw;
     padding-bottom: 10px;
+    font-size: 25px;
 }
 .scene2content {
     display: flex;
@@ -125,13 +155,20 @@
 .doors img {
     height: 17dvw;
     width: 10dvw;
+    transition-duration: 0.3s;
 }
 
-.doors img:hover {
+.doors a.active {
+    background-color: black;
+    box-shadow: 0px 0px 30px 1px black,
+                0px 0px 30px 1px black
+}
+
+.doors img:hover, img::selection{
     cursor: pointer;
     background-color: black;
-    box-shadow: 0px 0px 50px 1px black,
-                0px 0px 50px 1px black
+    box-shadow: 0px 0px 30px 1px black,
+                0px 0px 30px 1px black
 }
 .tracker {
     position:absolute;
@@ -146,6 +183,35 @@
 .tracker h1 {
     color: white;
     margin: 0;
+}
+.scene2btn {
+    position: absolute;
+    display: flex;
+    padding-left: 23.5%;
+    padding-right: 20%;
+    padding-bottom: 100px;
+}
+.scene2btn button {
+    background-color: #001d6c;
+    color: white;
+    font-size: 1.5rem;
+    width: fit-content;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Julee", cursive;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    display: none;
+    z-index: 10000;
+}
+.selected {
+    background-color: black;
+    box-shadow: 0px 0px 30px 1px black,
+                0px 0px 30px 1px black
 }
 
 /* RULES SCENE */
@@ -188,7 +254,7 @@
     margin-top: 5%;
     font-family: "Julee", cursive;
 }
-#rulescenebtn:hover, #startbtn:hover, #rulesbtn:hover, #losebtn:hover, #winbtn:hover {
+#rulescenebtn:hover, #startbtn:hover, #rulesbtn:hover, #losebtn:hover, #winbtn:hover, #selectbtn:hover, #tomselectbtn:hover {
     cursor: pointer;
     box-shadow: 1px 1px 10px #001d6c;
 }
@@ -260,6 +326,7 @@
     justify-content: space-evenly;
     height: fit-content;
     width: fit-content;
+    padding-bottom: 10dvw;
 }
 
 .tomtext {
@@ -299,11 +366,12 @@
 .topdoors img {
     rotate: 90deg;
     height: 7dvh;
+    transition: 0.3s;
 }
 
 .topdoors img:hover {
     cursor: pointer;
-    filter: drop-shadow(0 0 20px black)
+    filter: drop-shadow(0 0 7px black)
 }
 .tracker2 {
     position:absolute;
@@ -318,6 +386,34 @@
 .tracker2 h1 {
     color: white;
     margin: 0;
+}
+.tombtn {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    padding-left: 23.5%;
+    padding-right: 20%;
+    padding-bottom: 100px;
+}
+.tombtn button {
+    background-color: #001d6c;
+    color: white;
+    font-size: 1.5rem;
+    width: fit-content;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Julee", cursive;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    /* display: none; */
+    z-index: 10000;
+}
+.selected2 {
+    filter: drop-shadow(0 0 7px black)
 }
 
 /* RIGHT SCENE */
@@ -346,6 +442,13 @@
 #losecontent h1 {
     font-size: 100px;
     color: #001d6c;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#losecontent h2 {
+    color: #001d6c;
+    margin: 0;
 }
 
 #losecontent button {
@@ -377,6 +480,13 @@
 #wincontent h1 {
     font-size: 100px;
     color: #001d6c;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#wincontent h2 {
+    color: #001d6c;
+    margin: 0;
 }
 
 #wincontent button {

@@ -7,8 +7,14 @@
     <title>Spooky Scary Scram</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <audio id="scarySound" src="assets/scarysound.wav" preload="auto" loop></audio>
+    <audio id="heartbeat" src="assets/heartbeat.wav" preload="auto" loop></audio>
+    <audio id="jumpscare" src="assets/jumpscare.wav" preload="auto"></audio>
 </head>
 <body>
+    <div class="soundcontainer">
+        <button class="buttons" id="soundbtn">Sound: Off</button>
+    </div>
     <div id="scene1" class="scene">
         <div class="drip_container">
             <img src="assets/dripping.png" alt="dripping background" class="pictures">
@@ -38,11 +44,14 @@
             <h3 id="random">Pick a Door!</h3>
             <h3 id="final">(FINAL DOOR)</h3>
         </div>
-        <h3>BEWARE OF THE CAT!!!</h3>
+        <h3>BEWARE!!! TOM IS HIDING BEHIND ONE OF THE DOORS!</h3>
         <div class="doors">
-            <img src="assets/door.png" alt="door one" class="pictures" id="doorone">
-            <img src="assets/door.png" alt="door two" class="pictures" id="doortwo">
-            <img src="assets/door.png" alt="door three" class="pictures" id="doorthree">
+            <img src="assets/door.png" alt="door one" class="selected" id="doorone">
+            <img src="assets/door.png" alt="door two" class="selected" id="doortwo">
+            <img src="assets/door.png" alt="door three" class="selected" id="doorthree">
+        </div>
+        <div class="scene2btn">
+            <button class="buttons" id="selectbtn">Select Door</button>
         </div>
     </div>
     <div id="rulescene" class="scene">
@@ -73,7 +82,8 @@
         </div>
         <div class="safecontent">
             <h1>YOU MADE IT THROUGH SAFELY!!</h1>
-            <h1>KEEP GOING! THE SMELL OF CHEESE IS SO CLOSE BY...</h1>
+            <h1>KEEP OPENING THE RIGHT DOORS!</h1>
+            <h1>THE SMELL OF CHEESE IS SO CLOSE BY...</h1>
         </div>
     </div>
     <div id="scaryscene" class="scene">
@@ -103,10 +113,13 @@
                 <h1>to scare Tom and get your keys back!</h1>
             </div>
             <div class="topdoors">
-                <img src="assets/rectangle.png" alt="top door one" class="pictures" id="topone">
-                <img src="assets/rectangle.png" alt="top door two" class="pictures" id="toptwo"> 
-                <img src="assets/rectangle.png" alt="top door three" class="pictures" id="topthree">
+                <img src="assets/rectangle.png" alt="top door one" class="selected2" id="topone">
+                <img src="assets/rectangle.png" alt="top door two" class="selected2" id="toptwo"> 
+                <img src="assets/rectangle.png" alt="top door three" class="selected2" id="topthree">
             </div>
+        </div>
+        <div class="tombtn">
+            <button class="buttons" id="tomselectbtn">Select Door</button>
         </div>
     </div>
     <div id="rightscene" class="scene">
@@ -133,6 +146,7 @@
             <img src="assets/dripping.png" alt="dripping background" class="pictures">
         </div>
         <div id="losecontent">
+            <h2>Tom was able to reach his milk first!</h2>
             <h1>YOU LOSE!!!</h1>
             <button class="buttons" id="losebtn">Play Again</button>
         </div>
@@ -142,6 +156,7 @@
             <img src="assets/dripping.png" alt="dripping background" class="pictures">
         </div>
         <div id="wincontent">
+            <h2>You reached your desired cheese first!</h2>
             <h1>YOU WIN!!!</h1>
             <button class="buttons" id="winbtn">Play Again</button>
         </div>
