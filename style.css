@@ -189,7 +189,7 @@
     display: flex;
     padding-left: 23.5%;
     padding-right: 20%;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
 }
 .scene2btn button {
     background-color: #001d6c;
@@ -224,7 +224,7 @@
     font-size: 2.5rem;
     color: black;
     margin-bottom: 0;
-    font-family: 'Protest Revolution';
+    font-family: 'Julee';
     text-shadow: 2px 2px 10px white;
 }
 
@@ -270,6 +270,18 @@
     color: white;
     justify-content: center;
     z-index: 1000;
+    animation: flicker 0.5s ease-in-out infinite alternate;
+    transition: all 0.5s ease-in-out;
+}
+@keyframes flicker {
+	0% {
+		opacity: 0.5;
+		text-shadow: 2px 2px 10px white;
+	}
+	100% {
+		opacity: 1;
+		text-shadow: 2px 2px 20px white;
+	}
 }
 
 .darkness {
@@ -290,6 +302,28 @@
 
 .safecontent {
     color:#001d6c;
+}
+#safebtncontent {
+    display: flex;
+    padding-bottom: 5px;
+    justify-content: center;
+    padding: 5%;
+}
+#safebtncontent button {
+    background-color: #001d6c;
+    color: white;
+    font-size: 1.5rem;
+    width: fit-content;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Julee", cursive;
+    z-index: 10000;
+}
+#safebtncontent button:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 10px #001d6c;
 }
 
 /* SCARY SCENE */
@@ -315,6 +349,29 @@
     opacity: 90%;
 }
 
+#scarybtncontent {
+    display: flex;
+    padding-bottom: 5px;
+    justify-content: center;
+    padding: 5%;
+}
+#scarybtncontent button {
+    background-color: #001d6c;
+    color: white;
+    font-size: 1.5rem;
+    width: fit-content;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Julee", cursive;
+    z-index: 10000;
+}
+#scarybtncontent button:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 3px white;
+}
+
 /* TOM SCENE */
 
 #tomscene {
@@ -327,6 +384,7 @@
     height: fit-content;
     width: fit-content;
     padding-bottom: 10dvw;
+    align-items: center;
 }
 
 .tomtext {
@@ -334,6 +392,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: fit-content;
+    padding-top: 15%;
+    padding-right: 10%;
 }
 
 .tomcontent2 {
@@ -352,6 +413,22 @@
     font-family: 'Creepster';
     margin-top:5px;
     margin-bottom: 5px;
+    margin-right: 15px;
+}
+.circles {
+    width: fit-content;
+    height: 70dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20dvh;
+}
+.circles img {
+    height: 15%;
+}
+.hidden {
+    visibility: hidden;
 }
 
 .topdoors {
@@ -359,19 +436,22 @@
     display: flex;
     flex-direction: column;
     height: 70dvh;
+    width: auto;
     padding-top: 20dvh;
+    margin: 0;
     /* padding-bottom: 5dvh; */
 }
 
 .topdoors img {
     rotate: 90deg;
-    height: 7dvh;
+    height: 5dvh;
+    width: 20dvh;
     transition: 0.3s;
 }
 
 .topdoors img:hover {
     cursor: pointer;
-    filter: drop-shadow(0 0 7px black)
+    filter: drop-shadow(0 0 7px black);
 }
 .tracker2 {
     position:absolute;
@@ -401,7 +481,7 @@
     font-size: 1.5rem;
     width: fit-content;
     border-radius: 2rem;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     font-family: "Julee", cursive;
@@ -413,17 +493,60 @@
     z-index: 10000;
 }
 .selected2 {
-    filter: drop-shadow(0 0 7px black)
+    filter: drop-shadow(0 0 7px black);
 }
-
 /* RIGHT SCENE */
 #rightscene {
     background-color: #faf8e1;
+}
+#rightbtncontent {
+    display: flex;
+    padding-bottom: 5px;
+    justify-content: center;
+    padding: 5%;
+}
+#rightbtncontent button {
+    background-color: #001d6c;
+    color: white;
+    font-size: 1.5rem;
+    width: fit-content;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Julee", cursive;
+    z-index: 10000;
+}
+#rightbtncontent button:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 10px #001d6c;
 }
 
 /* WRONG SCENE */
 #wrongscene {
     background-color: #faf8e1;
+}
+#wrongbtncontent {
+    display: flex;
+    padding-bottom: 5px;
+    justify-content: center;
+    padding: 5%;
+}
+#wrongbtncontent button {
+    background-color: #001d6c;
+    color: white;
+    font-size: 1.5rem;
+    width: fit-content;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Julee", cursive;
+    z-index: 10000;
+}
+#wrongbtncontent button:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 10px #001d6c;
 }
 
 /* LOSE SCENE */

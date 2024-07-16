@@ -21,6 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const topone = document.getElementById('topone');
     const toptwo = document.getElementById('toptwo');
     const topthree = document.getElementById('topthree');
+    const brownone = document.getElementById('brownone');
+    const browntwo = document.getElementById('browntwo');
+    const brownthree = document.getElementById('brownthree');
     const losebtn = document.getElementById('losebtn');
     const winbtn = document.getElementById('winbtn');
     const rightscene = document.getElementById('rightscene');
@@ -31,6 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const heartSound = document.getElementById('heartbeat');
     const jumpScare = document.getElementById('jumpscare');
     const soundbtn = document.getElementById('soundbtn');
+    const wrongbtn = document.getElementById('wrongbtn');
+    const rightbtn = document.getElementById('rightbtn');
+    const scarybtn = document.getElementById('scarybtn');
+    const safebtn = document.getElementById('safebtn');
 
     scene1.style.display ='flex';
     scene2.style.display = 'none';
@@ -101,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('darkscene').style.display = 'flex';
         document.getElementById('soundbtn').style.display = 'none';
         clearDoor();
-        const randomDelay = Math.floor(Math.random() * 4000) + 3000;
+        const randomDelay = Math.floor(Math.random() * 3000) + 3000;
         scarySound.pause();
         if (soundOn) {
             heartSound.play();
@@ -109,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             document.getElementById('darkscene').style.display = 'none';
             heartSound.pause();
-            if (mypick == myanswer) {
+            if (true) {
                 document.getElementById('scaryscene').style.display = 'flex';
                 updateStage();
                 if (soundOn) {
@@ -131,6 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         }, randomDelay);
+        document.getElementById('selectbtn').style.display = 'none';
     });
 
     const updateStage = () => {
@@ -138,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('stageTracker2').innerHTML = `Stage: ${stage}/5`;
     }
 
-    scaryscene.addEventListener('click', () => {
+    scarybtn.addEventListener('click', () => {
         if (soundOn) {
             jumpScare.pause();
             scarySound.load();
@@ -154,15 +162,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    topone.addEventListener('click', () => hideDoor(1, topone));
-    toptwo.addEventListener('click', () => hideDoor(2, toptwo));
-    topthree.addEventListener('click', () => hideDoor(3, topthree));
+    topone.addEventListener('click', () => hideDoor(1, topone, brownone));
+    toptwo.addEventListener('click', () => hideDoor(2, toptwo, browntwo));
+    topthree.addEventListener('click', () => hideDoor(3, topthree, brownthree));
 
-    const hideDoor = (doorNum, doorElement) => {
+    const hideDoor = (doorNum, doorElement, brownElement) => {
         clearDoor();
         updateStage();
         doorElement.classList.add('selected2');
         document.getElementById('tomselectbtn').style.display = 'flex';
+        brownone.classList.add('hidden');
+        browntwo.classList.add('hidden');
+        brownthree.classList.add('hidden');
+        brownElement.classList.remove('hidden');
         yourpick = doorNum;
         youranswer = Math.floor(Math.random() * 3) + 1;
     }
@@ -185,9 +197,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('wrongscene').style.display = 'flex';
             }
         }
+        tomselectbtn.style.display = 'none';
+        brownone.classList.add('hidden');
+        browntwo.classList.add('hidden');
+        brownthree.classList.add('hidden');
     });
 
-    rightscene.addEventListener('click', () => {
+    rightbtn.addEventListener('click', () => {
         if (soundOn) {
             scarySound.play();
         }
@@ -201,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    wrongscene.addEventListener('click', () => {
+    wrongbtn.addEventListener('click', () => {
         if (soundOn) {
             scarySound.play();
         }
@@ -215,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    safescene.addEventListener('click', () => {
+    safebtn.addEventListener('click', () => {
         if (soundOn) {
             scarySound.play();
         }
