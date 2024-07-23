@@ -495,6 +495,77 @@
 .selected2 {
     filter: drop-shadow(0 0 7px black);
 }
+
+/* DARK SCENE */
+
+#darkscene {
+    background-color: #faf8e1;
+}
+
+.darkcontent {
+    font-family: 'Creepster';
+    color: white;
+    justify-content: center;
+    z-index: 1000;
+    animation: flicker 0.5s ease-in-out infinite alternate;
+    transition: all 0.5s ease-in-out;
+}
+@keyframes flicker {
+	0% {
+		opacity: 0.5;
+		text-shadow: 2px 2px 10px white;
+	}
+	100% {
+		opacity: 1;
+		text-shadow: 2px 2px 20px white;
+	}
+}
+
+.darkness {
+    height: 100dvh;
+    width: 100dvw;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 90%;
+}
+
+/* DARK SCENE */
+
+#tomdarkscene {
+    background-color: #faf8e1;
+}
+
+.tomdarkcontent {
+    font-family: 'Creepster';
+    color: white;
+    justify-content: center;
+    z-index: 1000;
+    animation: flicker 0.5s ease-in-out infinite alternate;
+    transition: all 0.5s ease-in-out;
+}
+@keyframes flicker {
+	0% {
+		opacity: 0.5;
+		text-shadow: 2px 2px 10px white;
+	}
+	100% {
+		opacity: 1;
+		text-shadow: 2px 2px 20px white;
+	}
+}
+
+.tomdarkness {
+    height: 100dvh;
+    width: 100dvw;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 90%;
+}
+
 /* RIGHT SCENE */
 #rightscene {
     background-color: #faf8e1;

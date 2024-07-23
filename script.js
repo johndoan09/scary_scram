@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             document.getElementById('darkscene').style.display = 'none';
             heartSound.pause();
-            if (true) {
+            if (myanswer == mypick) {
                 document.getElementById('scaryscene').style.display = 'flex';
                 updateStage();
                 if (soundOn) {
@@ -184,26 +184,47 @@ document.addEventListener('DOMContentLoaded', () => {
             scarySound.play();
         }
         clearDoor();
-        document.getElementById('tomscene').style.display = 'none';
-        if (yourpick == youranswer) {
-            document.getElementById('rightscene').style.display = 'flex';
-            updateStage();
-        } else {
-            stage--;
-            updateStage();
-            if (stage == 0) {
-                document.getElementById('losescene').style.display = 'flex';
-            } else {
-                document.getElementById('wrongscene').style.display = 'flex';
-            }
+        const randomDelay2 = Math.floor(Math.random() * 3000) + 3000;
+        scarySound.pause();
+        if (soundOn) {
+            heartSound.play();
         }
+        document.getElementById('tomscene').style.display = 'none';
+        document.getElementById('tomdarkscene').style.display = 'flex';
+        setTimeout(() => {
+            soundbtn.style.display = 'flex';
+            document.getElementById('tomdarkscene').style.display = 'none';
+            heartSound.pause();
+            if (yourpick == youranswer) {
+                document.getElementById('rightscene').style.display = 'flex';
+                updateStage();
+                if (soundOn) {
+                    jumpScare.load();
+                    jumpScare.play();
+                }
+            } else {
+                stage--;
+                updateStage();
+                if (soundOn) {
+                    scarySound.load();
+                    scarySound.play();
+                }
+                if (stage == 0) {
+                    document.getElementById('losescene').style.display = 'flex';
+                } else {
+                    document.getElementById('wrongscene').style.display = 'flex';
+                }
+            }
+        }, randomDelay2);
         tomselectbtn.style.display = 'none';
+        soundbtn.style.display = 'none';
         brownone.classList.add('hidden');
         browntwo.classList.add('hidden');
         brownthree.classList.add('hidden');
     });
 
     rightbtn.addEventListener('click', () => {
+        soundbtn.style.display = 'flex';
         if (soundOn) {
             scarySound.play();
         }
@@ -218,6 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     wrongbtn.addEventListener('click', () => {
+        soundbtn.style.display = 'flex';
         if (soundOn) {
             scarySound.play();
         }
@@ -232,6 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     safebtn.addEventListener('click', () => {
+        soundbtn.style.display = 'flex';
         if (soundOn) {
             scarySound.play();
         }
@@ -245,6 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     losebtn.addEventListener('click', () => {
+        soundbtn.style.display = 'flex';
         if (soundOn) {
             scarySound.load();
             scarySound.play();
@@ -257,6 +281,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     winbtn.addEventListener('click', () => {
+        soundbtn.style.display = 'flex';
         if (soundOn) {
             scarySound.load();
             scarySound.play();
