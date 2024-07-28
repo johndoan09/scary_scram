@@ -199,15 +199,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('rightscene').style.display = 'flex';
                 updateStage();
                 if (soundOn) {
-                    jumpScare.load();
-                    jumpScare.play();
+                    scarySound.load();
+                    scarySound.play();
                 }
             } else {
                 stage--;
                 updateStage();
                 if (soundOn) {
-                    scarySound.load();
-                    scarySound.play();
+                    jumpScare.load();
+                    jumpScare.play();
                 }
                 if (stage == 0) {
                     document.getElementById('losescene').style.display = 'flex';

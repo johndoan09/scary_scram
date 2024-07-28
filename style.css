@@ -27,7 +27,7 @@
     flex-direction: column;
 }
 .title{
-    padding-right: 30%;
+    /* padding-right: 30%; */
 }
 .title h3 {
     color: #001d6c;
