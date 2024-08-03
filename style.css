@@ -369,10 +369,14 @@
 }
 .safecontainer {
     display: flex;
-    width: 90vw;
+    width: 80vw;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    /* gap: 0.1rem; */
+}
+.safecontainer img{
+    height: 50%;
+    width: 50%;
 }
 
 /* SCARY SCENE */
