@@ -383,6 +383,7 @@
 
 #jumpscarescene {
     background-color: black;
+    box-sizing: border-box;
 }
 
 .scarecontainer {
@@ -394,6 +395,8 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 10%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .scarecontainer img {
