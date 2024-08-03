@@ -38,6 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const rightbtn = document.getElementById('rightbtn');
     const scarybtn = document.getElementById('scarybtn');
     const safebtn = document.getElementById('safebtn');
+    const jumpscarescene = document.getElementById('jumpscarescene');
+    const scareContainer = document.getElementById('scarecontainer');
 
     scene1.style.display ='flex';
     scene2.style.display = 'none';
@@ -107,6 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('scene2').style.display = 'none';
         document.getElementById('darkscene').style.display = 'flex';
         document.getElementById('soundbtn').style.display = 'none';
+        document.getElementById('jumpscarescene').style.display = 'none';
         clearDoor();
         const randomDelay = Math.floor(Math.random() * 3000) + 3000;
         scarySound.pause();
@@ -117,7 +120,11 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('darkscene').style.display = 'none';
             heartSound.pause();
             if (myanswer == mypick) {
-                document.getElementById('scaryscene').style.display = 'flex';
+                document.getElementById('jumpscarescene').style.display = 'flex';
+                setTimeout(() => {
+                    document.getElementById('jumpscarescene').style.direction = 'none';
+                    document.getElementById('scaryscene').style.display = 'flex';
+                }, 1000);
                 updateStage();
                 if (soundOn) {
                     jumpScare.load();
@@ -230,6 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         clearDoor();
         document.getElementById('rightscene').style.display = 'none';
+        jumpscarescene.style.display = 'none';
         document.getElementById('scene2').style.display = 'flex';
         if (stage == 5) {
             document.getElementById('final').style.display = 'flex';
@@ -275,6 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         document.getElementById('losescene').style.display = 'none';
         document.getElementById('scene1').style.display = 'flex';
+        jumpscarescene.style.display = 'none';
         stage = 3;
         updateStage();
         document.getElementById('final').style.display = 'none';
@@ -288,6 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         document.getElementById('winscene').style.display = 'none';
         document.getElementById('scene1').style.display = 'flex';
+        jumpscarescene.style.display = 'none';
         stage = 3;
         updateStage();
         document.getElementById('final').style.display = 'none';

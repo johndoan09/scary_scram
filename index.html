@@ -19,14 +19,27 @@
         <div class="drip_container">
             <img src="assets/dripping.png" alt="dripping background" class="pictures">
         </div>
-        <div class="title">
-            <h3>Mouse and Cat's</h3>
-            <div class="title1">
-                <h1>Spooky Scary Scram</h1>
+        <div class="scene1container">
+            <div class="mousecontainer">
+                <img src="assets/mouse.png" alt="mouse running" class="pictures">
             </div>
-            <div class="scene1btns">
-                <button class="buttons" id="startbtn">Start</button>
-                <button class="buttons" id="rulesbtn">Rules</button>
+            <div class="middlecontainer">
+                <div class="title">
+                    <h3>Mouse and Cat's</h3>
+                    <div class="title1">
+                        <h1>Spooky Scary Scram</h1>
+                    </div>
+                    <div class="scene1btns">
+                        <button class="buttons" id="startbtn">Start</button>
+                        <button class="buttons" id="rulesbtn">Rules</button>
+                    </div>
+                </div>
+                <div class="smokecontainer">
+                    <img src="assets/smoke.png" alt="smoke" class="pictures">
+                </div>
+            </div>
+            <div class="catcontainer">
+                <img src="assets/cat.png" alt="cat" class="pictures">
             </div>
         </div>
     </div>
@@ -60,7 +73,7 @@
         </div>
         <div class="content">
             <h1>How To Play:</h1>
-            <p>Play as Jerry to reach your cheese before Tom reaches his milk. Unlock the correct doors with a special key to find your special treat. Be careful! Tom might be hiding behind the door! If he catches you, he will steal the key to unlock the doors to his milk. Take back the key by hiding behind the door you think he will pick.</p>
+            <p>Play as the mouse to reach your cheese before the cat reaches his milk. Unlock the correct doors with a special key to find your special treat. Be careful! The mischievous cat might be hiding behind the door! If he catches you, he will steal the key to unlock the doors to his milk. Take back the key by hiding behind the door you think he will pick.</p>
             <button class="buttons" id="rulescenebtn">Back</button>
         </div>
     </div>
@@ -80,13 +93,26 @@
         <div class="drip_container">
             <img src="assets/dripping.png" alt="dripping background" class="pictures">
         </div>
-        <div class="safecontent">
-            <h1>YOU MADE IT THROUGH SAFELY!!</h1>
-            <h1>KEEP OPENING THE RIGHT DOORS!</h1>
-            <h1>THE SMELL OF CHEESE IS SO CLOSE BY...</h1>
-            <div id="safebtncontent">
-                <button class="buttons" id="safebtn">Continue</button>
+        <div class="safecontainer">
+            <div class="happycontainer1">
+                <img src="assets/happymouse.png" alt="happy mouse" class="pictures">
             </div>
+            <div class="safecontent">
+                <h1>YOU MADE IT THROUGH SAFELY!!</h1>
+                <h1>KEEP OPENING THE RIGHT DOORS!</h1>
+                <h1>THE SMELL OF CHEESE IS SO CLOSE BY...</h1>
+                <div id="safebtncontent">
+                    <button class="buttons" id="safebtn">Continue</button>
+                </div>
+            </div>
+            <div class="happycontainer2">
+                <img src="assets/happymouse.png" alt="happy mouse" class="pictures">
+            </div>
+        </div>
+    </div>
+    <div id="jumpscarescene" class="scene">
+        <div class="scarecontainer">
+            <img src="assets/scarycat.png" alt="dripping background" class="pictures">
         </div>
     </div>
     <div id="scaryscene" class="scene">
@@ -94,11 +120,19 @@
             <img src="assets/dripping.png" alt="dripping background" class="pictures">
         </div>
         <div class="darkness2"></div>
-        <div class="scarycontent">
-            <h1>AHHHHHHH!!!</h1>
-            <h1>OH NOO! TOM TOOK THE KEYS!</h1>
-            <div id="scarybtncontent">
-                <button class="buttons" id="scarybtn">Continue</div>
+        <div class="scarycontainer">
+            <div class="catcontainer1">
+                <img src="assets/scarycat.png" alt="scary cat" class="pictures">
+            </div>
+            <div class="scarycontent">
+                <h1>AHHHHHHH!!!</h1>
+                <h1>OH NOO! TOM TOOK THE KEYS!</h1>
+                <div id="scarybtncontent">
+                    <button class="buttons" id="scarybtn">Continue</button>
+                </div>
+            </div> 
+            <div class="catcontainer2">
+                <img src="assets/scarycat.png" alt="scary cat" class="pictures">
             </div>
         </div>
     </div>
@@ -119,14 +153,17 @@
                 <h1>to scare Tom and get your keys back!</h1>
             </div>
             <div class="circles">
-                <img src="assets/browncircle.png" alt="circle one" class="hidden" id="brownone">
-                <img src="assets/browncircle.png" alt="circle two" class="hidden" id="browntwo">
-                <img src="assets/browncircle.png" alt="cicrle three" class="hidden" id="brownthree">
+                <img src="assets/scarymouse.png" alt="circle one" class="hidden" id="brownone">
+                <img src="assets/scarymouse.png" alt="circle two" class="hidden" id="browntwo">
+                <img src="assets/scarymouse.png" alt="cicrle three" class="hidden" id="brownthree">
             </div>
             <div class="topdoors">
                 <img src="assets/rectanglewhite.png" alt="top door one" class="selected2" id="topone">
                 <img src="assets/rectanglewhite.png" alt="top door two" class="selected2" id="toptwo"> 
                 <img src="assets/rectanglewhite.png" alt="top door three" class="selected2" id="topthree">
+            </div>
+            <div class="catpickcontainer">
+                <img src="assets/scarycat.png" alt="cat picking" class="pictures">
             </div>
         </div>
         <div class="tombtn">
@@ -146,12 +183,20 @@
         <div class="drip_container">
             <img src="assets/dripping.png" alt="dripping background" class="pictures">
         </div>
-        <div id="rightcontent">
-            <h1>YAYYYY!</h1>
-            <h1>You picked the right door!</h1>
-            <h1>Now go and get that cheese!</h1>
-            <div id="rightbtncontent">
-                <button class="buttons" id="rightbtn">Continue</button>
+        <div class="rightcontainer">
+            <div class="mousecontainer1">
+                <img src="assets/scarymouse.png" alt="mouse" class="pictures">
+            </div>
+            <div id="rightcontent">
+                <h1>YAYYYY!</h1>
+                <h1>You picked the right door!</h1>
+                <h1>Now go and get that cheese!</h1>
+                <div id="rightbtncontent">
+                    <button class="buttons" id="rightbtn">Continue</button>
+                </div>
+            </div>
+            <div class="mousecontainer2">
+                <img src="assets/scarymouse.png" alt="mouse" class="pictures">
             </div>
         </div>
     </div>
@@ -159,11 +204,19 @@
         <div class="drip_container">
             <img src="assets/dripping.png" alt="dripping background" class="pictures">
         </div>
-        <div id="wrongcontent">
-            <h1>Awwww...</h1>
-            <h1>You picked the wrong room!</h1>
-            <div id="wrongbtncontent">
-                <button class="buttons" id="wrongbtn">Continue</button>
+        <div class="wrongcontainer">
+            <div class="mousecontainer3">
+                <img src="assets/scaredmouse.png" alt="mouse" class="pictures">
+            </div>
+            <div id="wrongcontent">
+                <h1>Awwww...</h1>
+                <h1>You picked the wrong room!</h1>
+                <div id="wrongbtncontent">
+                    <button class="buttons" id="wrongbtn">Continue</button>
+                </div>
+            </div>
+            <div class="mousecontainer4">
+                <img src="assets/scaredmouse.png" alt="mouse" class="pictures">
             </div>
         </div>
     </div>
@@ -171,20 +224,36 @@
         <div class="drip_container">
             <img src="assets/dripping.png" alt="dripping background" class="pictures">
         </div>
-        <div id="losecontent">
-            <h2>Tom was able to reach his milk first!</h2>
-            <h1>YOU LOSE!!!</h1>
-            <button class="buttons" id="losebtn">Play Again</button>
+        <div class="losecontainer">
+            <div class="losecontainer1">
+                <img src="assets/scarycat.png" alt="cat" class="pictures">
+            </div>
+            <div id="losecontent">
+                <h2>Tom was able to reach his milk first!</h2>
+                <h1>YOU LOSE!!!</h1>
+                <button class="buttons" id="losebtn">Play Again</button>
+            </div>
+            <div class="losecontainer2">
+                <img src="assets/scarycat.png" alt="cat" class="pictures">
+            </div>
         </div>
     </div>
     <div id="winscene" class="scene">
         <div class="drip_container">
             <img src="assets/dripping.png" alt="dripping background" class="pictures">
         </div>
-        <div id="wincontent">
-            <h2>You reached your desired cheese first!</h2>
-            <h1>YOU WIN!!!</h1>
-            <button class="buttons" id="winbtn">Play Again</button>
+        <div class="wincontainer">
+            <div class="wincontainer1">
+                <img src="assets/happymouse.png" alt="mouse" class="pictures">
+            </div>
+            <div id="wincontent">
+                <h2>You reached your desired cheese first!</h2>
+                <h1>YOU WIN!!!</h1>
+                <button class="buttons" id="winbtn">Play Again</button>
+            </div>
+            <div class="wincontainer2">
+                <img src="assets/happymouse.png" alt="mouse" class="pictures">
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
